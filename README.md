@@ -13,7 +13,7 @@ Spring&amp;SpringMvc&amp;Mybatis 基础框架
  - 私有仓库地址：https://raw.githubusercontent.com/19960828/maven/master/
  ```
  <repository>
-    <id>lhj-core</id>
+    <id>hjieli-core</id>
     <url>https://raw.githubusercontent.com/19960828/maven/master/</url>
 </repository>
  ```
