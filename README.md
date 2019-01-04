@@ -5,4 +5,6 @@ Spring&amp;SpringMvc&amp;Mybatis 基础框架
   - 对于@RequestMapping 注解 进行了名称简化，可以使用@ReqMapping
   - 对于@ResponseBody 注解 进行了名称简化，可以使用@ResBody
 
- ### 注：对于以上功能的修改，是兼容矿建自带的功能，框架之前的使用方式也是可以使用的，并不受到影响
+
+
+注：对于以上功能的修改，是兼容矿建自带的功能，框架之前的使用方式也是可以使用的，并不受到影响
