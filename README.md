@@ -18,5 +18,29 @@ Spring&amp;SpringMvc&amp;Mybatis 基础框架
     <url>https://raw.githubusercontent.com/19960828/maven/master/</url>
 </repository>
  ```
+ 
+ + 修改的核心jar包pom配置如下：
+	 ```
+		 <dependency>
+			<groupId>com.hjieli.core</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hjieli.core</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hjieli.core</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.hjieli.core</groupId>
+		    <artifactId>hjieli-core</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+	 ```
 
 注：对于以上功能的修改，是兼容框架自带的功能，框架之前的使用方式也是可以使用的，并不受到影响
