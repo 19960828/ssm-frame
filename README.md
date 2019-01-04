@@ -8,5 +8,14 @@ Spring&amp;SpringMvc&amp;Mybatis 基础框架
 + 新增Mybatis 自动生成 mapper、xml、entiry 配置文件 mybatis-generator-config.xml
   - 需要 ide 安装 mybatis-generator 插件
   - 插件地址：https://dl.bintray.com/mybatis/mybatis-generator
+  
++ 增加私有Maven仓库，方便对修改后的spring源码进行管理
+ - 私有仓库地址：https://raw.githubusercontent.com/19960828/maven/master/
+ ```
+ <repository>
+    <id>lhj-core</id>
+    <url>https://raw.githubusercontent.com/19960828/maven/master/</url>
+</repository>
+ ```
 
 注：对于以上功能的修改，是兼容矿建自带的功能，框架之前的使用方式也是可以使用的，并不受到影响

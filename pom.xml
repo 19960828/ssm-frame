@@ -270,7 +270,7 @@
 	</dependencies>
   <repositories>
 	
-		  <repository>
+		<repository>
 	        <id>lhj-core</id>
 	        <url>https://raw.githubusercontent.com/19960828/maven/master/</url>
 	    </repository>
