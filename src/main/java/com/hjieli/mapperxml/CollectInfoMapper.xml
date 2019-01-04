@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hjieli.mapper.CollectInfoMapper">
+  <resultMap id="BaseResultMap" type="com.hjieli.entity.CollectInfo">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="datetime" jdbcType="TIMESTAMP" property="datetime" />
+    <result column="userId" jdbcType="VARCHAR" property="userid" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hjieli.entity.CollectInfoWithBLOBs">
+    <result column="title" jdbcType="LONGVARCHAR" property="title" />
+    <result column="url" jdbcType="LONGVARCHAR" property="url" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, datetime, userId
+  </sql>
+  <sql id="Blob_Column_List">
+    title, url
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from collect_info
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from collect_info
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.hjieli.entity.CollectInfoWithBLOBs">
+    insert into collect_info (id, datetime, userId, 
+      title, url)
+    values (#{id,jdbcType=VARCHAR}, #{datetime,jdbcType=TIMESTAMP}, #{userid,jdbcType=VARCHAR}, 
+      #{title,jdbcType=LONGVARCHAR}, #{url,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hjieli.entity.CollectInfoWithBLOBs">
+    insert into collect_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="datetime != null">
+        datetime,
+      </if>
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="url != null">
+        url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="datetime != null">
+        #{datetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="url != null">
+        #{url,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hjieli.entity.CollectInfoWithBLOBs">
+    update collect_info
+    <set>
+      <if test="datetime != null">
+        datetime = #{datetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="url != null">
+        url = #{url,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.hjieli.entity.CollectInfoWithBLOBs">
+    update collect_info
+    set datetime = #{datetime,jdbcType=TIMESTAMP},
+      userId = #{userid,jdbcType=VARCHAR},
+      title = #{title,jdbcType=LONGVARCHAR},
+      url = #{url,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hjieli.entity.CollectInfo">
+    update collect_info
+    set datetime = #{datetime,jdbcType=TIMESTAMP},
+      userId = #{userid,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
