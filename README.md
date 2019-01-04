@@ -10,7 +10,8 @@ Spring&amp;SpringMvc&amp;Mybatis 基础框架
   - 插件地址：https://dl.bintray.com/mybatis/mybatis-generator
   
 + 增加私有Maven仓库，方便对修改后的spring源码进行管理
- - 私有仓库地址：https://raw.githubusercontent.com/19960828/maven/master/
+   -  私有仓库地址：https://raw.githubusercontent.com/19960828/maven/master/
+   -  在 repositories 节点 下配置一下内容
  ```
  <repository>
     <id>hjieli-core</id>
