@@ -30,42 +30,10 @@
 		</dependency>
 		
 		<!-- spring核心包-->
-		<dependency>
-			<groupId>com.hjieli.core</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.hjieli.core</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.hjieli.core</groupId>
-			<artifactId>spring-oxm</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.hjieli.core</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.hjieli.core</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-
+		
 		<dependency>
 			<groupId>com.hjieli.core</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.hjieli.core</groupId>
-			<artifactId>spring-aop</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		
@@ -80,18 +48,56 @@
 			<artifactId>spring-context-support</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>com.hjieli.core</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>${spring.version}</version>
-		</dependency> 
+		
 		<dependency>
 		    <groupId>com.hjieli.core</groupId>
 		    <artifactId>hjieli-core</artifactId>
 		    <version>${spring.version}</version>
 		</dependency>
 		
+		
+		
+		<!-- spring核心包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 		
 		<!-- mybatis核心包 -->
 		<dependency>
@@ -261,9 +267,6 @@
 		    <artifactId>commons-pool</artifactId>
 		    <version>1.3</version>
 		</dependency>
-		
-		
-		
 	</dependencies>
   <repositories>
 	
@@ -280,7 +283,7 @@
 	   -->
 	</repositories>
 	<build>
-		<finalName>ssmframe</finalName>
+		<finalName>ssm-frame</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.mybatis.generator</groupId>
