@@ -13,7 +13,6 @@
 <!-- 	<import resource="scheduler-config.xml" /> -->
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
 	 <context:component-scan base-package="com.hjieli.action" >
-	 	<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	 </context:component-scan>
 	
 	<!-- 进行拦截：/**表示拦截所有controller -->

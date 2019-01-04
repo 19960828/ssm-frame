@@ -1,12 +1,13 @@
 package com.hjieli.action.test;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.hjieli.core.springframework.annotation.ReqMapping;
+import com.hjieli.core.springframework.annotation.ResBody;
 
 public class IndexAction {
 
-	@RequestMapping("demo")
-	@ResponseBody
+	@ReqMapping("demo")
+	@ResBody
 	public String demo() {
 		return "demo";
 	}

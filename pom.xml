@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>www.hjieli.com</groupId>
   <artifactId>ssmframe</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>version-0.0.1</version>
   <packaging>war</packaging>
   
   <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
